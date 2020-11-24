@@ -1,0 +1,7 @@
+.vscode/settings.json
+**/__pycache__
+project3.code-workspace
+build
+dist
+*.spec
+virtual_env
