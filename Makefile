@@ -12,11 +12,12 @@ clean:
 	
 prepare:
 	python3 -m venv $(venv)
-	source $(venv)/bin/activate; \
+	. $(venv)/bin/activate; \
+	pip install wheel; \
 	pip install -r requirements.txt;
 
 generate:
-	source $(venv)/bin/activate; \
+	. $(venv)/bin/activate; \
 	pyinstaller cli.py --name project3 --onefile --path $(venv)/lib/*/site-packages;
 
 assembly:

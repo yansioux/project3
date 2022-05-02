@@ -1,9 +1,12 @@
-import compress_pickle as pickle
+import pickle5 as pickle
+
+import pickle5 as pickle
+import bz2
 
 
 def load_dict(dict_file):
-    with open(dict_file, 'rb') as file:
-        return pickle.load(file, 'bz2')
+    with bz2.open(dict_file, 'rb') as file:
+        return pickle.load(file)
 
 
 def get_schemesandbasewordsforword(dict, word):
